@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Vendas {
+	public static void main(String[] args) {
+	    
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Nome do cliente: ");
+		String n = scanner.nextLine();
+		System.out.println("Total da compra: ");
+		double tc = scanner.nextDouble();
+		System.out.println("Total pago: ");
+		double tp = scanner.nextDouble();
+		double troco;
+		int[] notas = {1, 2, 5, 10, 20, 50, 100, 200};
+		
+		System.out.println("Nome: " + n);
+		System.out.println("Total da compra: R$" + tc);
+		System.out.println("Total pago: R$" + tp);
+		
+		if(tp<tc){
+		    System.out.println("O valor é insuficiente para realizar a compra.");
+		    return;
+		}else{
+		    troco = tp-tc;
+		System.out.println("Troco total: R$" + troco);
+		}
+		
+		System.out.println("Notas aceitáveis R$: ");
+		
+		for(int d:notas){
+		    if(d > troco){
+		        break;
+		    }
+		System.out.println(d);
+		}
+	}
+}
