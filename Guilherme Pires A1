@@ -14,14 +14,13 @@ public class Vendas {
 		double troco;
 		int[] notas = {1, 2, 5, 10, 20, 50, 100, 200};
 		
-		System.out.println("Nome: " + n);
-		System.out.println("Total da compra: R$" + tc);
-		System.out.println("Total pago: R$" + tp);
-		
 		if(tp<tc){
 		    System.out.println("O valor é insuficiente para realizar a compra.");
 		    return;
 		}else{
+		System.out.println("Nome: " + n);
+		System.out.println("Total da compra: R$" + tc);
+		System.out.println("Total pago: R$" + tp);
 		    troco = tp-tc;
 		System.out.println("Troco total: R$" + troco);
 		}
